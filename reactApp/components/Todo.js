@@ -5,15 +5,15 @@ class Todo extends React.Component {
   constructor(props) {
     super(props)
   }
+  strikethrough(e){
+    e.preventDefault();
 
+  }
   render() {
-    var strikethrough = {
-      "text-decoration": "line-through"
-    }
       if(this.props.task.completed) {
-        return(<li key={this.props.task} className="items" style={strikethrough}><button>X</button>{this.props.task.taskText}</li>)
+        return(<li key={this.props.task} className="items strikethrough" onClick={this.props.toggle}><button onClick={this.props.todoXClick}>X</button>{this.props.task.taskText}</li>)
       } else {
-        return(<li key={this.props.task} className="items"><button>X</button> {this.props.task.taskText}</li>)
+        return(<li key={this.props.task} className="items" onClick={this.props.toggle}><button onClick={this.props.todoXClick}>X</button> {this.props.task.taskText}</li>)
       }
   }
 }

@@ -14,6 +14,8 @@ class InputLine extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
+    this.props.submit(this.state.inputText);
+    this.setState({inputText: ""});
   }
   render() {
     return(
