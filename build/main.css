@@ -22,3 +22,7 @@ body {
   margin-left: 35%;
   list-style-type: none;
 }
+
+.strikethrough {
+  text-decoration: line-through
+}
